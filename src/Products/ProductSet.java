@@ -30,6 +30,28 @@ public class ProductSet {
         }
     }
 
+    public Double sumPriceProduct(){
+        double sum = 0;
+        for (Product product : productSet) {
+            sum += (product.getPrice() * product.getWeight());
+        }
+
+        return sum;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductSet that = (ProductSet) o;
+        return Objects.equals(productSet, that.productSet);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productSet);
+    }
+
     @Override
     public String toString() {
         return "ProductSet{" +

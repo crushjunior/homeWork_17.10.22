@@ -16,6 +16,9 @@ public class Main {
 
 
         ProductSet productSet = new ProductSet();
+        ProductSet productSet1 = new ProductSet();
+        ProductSet productSet2 = new ProductSet();
+
         productSet.addProduct(banana);
         productSet.addProduct(apple);
         productSet.addProduct(apple1);
@@ -29,7 +32,31 @@ public class Main {
         productSet.removeProduct(carrot);
         productSet.removeProduct(cucumber);
         productSet.removeProduct(cabbage);
+
+        productSet1.addProduct(tomato);
+        productSet1.addProduct(carrot);
+        productSet1.addProduct(cucumber);
+        productSet1.addProduct(cabbage);
+
+        productSet2.addProduct(tomato);
+        productSet2.addProduct(carrot);
+        productSet2.addProduct(cucumber);
+        productSet2.addProduct(cabbage);
+
         System.out.println();
         System.out.println(productSet);
+        System.out.println();
+
+        Recipe borsh = new Recipe(productSet, "Борщ");
+        Recipe borsh1 = new Recipe(productSet1, "Борщ");
+        Recipe borsh2 = new Recipe(productSet2, "НЕ Борщ");
+
+        System.out.println(borsh);
+        System.out.println();
+        RecipeBook cookBook = new RecipeBook();
+        cookBook.addRecipe(borsh);
+        cookBook.addRecipe(borsh1);
+        cookBook.addRecipe(borsh2);
+        System.out.println(cookBook);
     }
 }
