@@ -15,7 +15,9 @@ public class School {
         while(numbers.size() < 15) {
             int part1 = random.nextInt(8) + 2;
             int part2 = random.nextInt(8) + 2;
-            if (!numbers.contains(part1 + part2) && !numbers.contains(part2 + part1)) {
+            String str1 = Integer.toString(part1 * part2);
+            String str2 = Integer.toString(part2 * part1);
+            if (!numbers.contains(str1) && !numbers.contains(str2)) {
                 numbers.add(part1 + " * " + part2 + " = ?\n");
             }
         }

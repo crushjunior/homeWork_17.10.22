@@ -20,11 +20,11 @@ public class Main {
 //        set.removeIf(integer -> integer %2 != 0);
         while (iterator.hasNext()) {
             var integer = iterator.next();
-            if (integer % 2 == 0) {
+            if (integer % 2 != 0) {
                 iterator.remove();
-                System.out.print(integer + " ");
+
             }
         }
-//        System.out.println(set);
+        System.out.println(set);
     }
 }

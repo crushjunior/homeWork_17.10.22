@@ -13,23 +13,24 @@ public class PassportService {
 
 
     public Passport searchPassport(String number) {
-        for (Passport passport : passportMap.values()) {
-            if (passport.getNumber().equals(number)) {
-                return passport;
-            }
-        }
-        return null;
+        return passportMap.get(number);
     }
 
     public void addPassport(Passport passport) {
-        if (searchPassport(passport.getNumber()) == null) {
+        if (!passportMap.containsKey(passport.getNumber())) {
             passportMap.put(passport.getNumber(), passport);
         } else {
-            passport.setLastName(passport.getLastName());
-            passport.setFirstName(passport.getFirstName());
-            passport.setPatronymic(passport.getPatronymic());
+
+            Passport pMap = passportMap.get(passport.getNumber());
+            pMap.setPatronymic(passport.getPatronymic());
+            pMap.setFirstName(passport.getFirstName());
+            pMap.setLastName(passport.getLastName());
         }
     }
+
+    //            passportMap.get(passport).setFirstName(passport.getFirstName());
+//            passportMap.get(passport).setLastName(passport.getLastName());
+//            passportMap.get(passport).setPatronymic(passport.getPatronymic());
 
     @Override
     public boolean equals(Object o) {

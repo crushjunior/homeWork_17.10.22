@@ -8,7 +8,7 @@ public class Main {
         Passport passport1 = new Passport("1234", "Иванов", "Иван", "Иванович", "10.11.1973");
         Passport passport2 = new Passport("6541", "Яковлев", "Кирилл", "Матвеевич", "10.08.1985");
         Passport passport3 = new Passport("9876", "Бондаренко", "Борис", "Михайлович", "01.12.1981");
-        Passport passport4 = new Passport("4321", "Захаров", "Павел", "Павлович", "10.11.1973");
+        Passport passport4 = new Passport("6541", "Захаров", "Павел", "Павлович", "10.11.1973");
 
 
         PassportService passportServiceMap = new PassportService();

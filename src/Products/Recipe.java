@@ -38,12 +38,12 @@ public class Recipe {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Recipe recipe = (Recipe) o;
-        return Objects.equals(productSet, recipe.productSet) && Objects.equals(costOfRecipe, recipe.costOfRecipe); // && Objects.equals(nameOfRecipe, recipe.nameOfRecipe);
+        return Objects.equals(nameOfRecipe, recipe.nameOfRecipe);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productSet, costOfRecipe); //, nameOfRecipe);
+        return Objects.hash(nameOfRecipe);
     }
 
     @Override
