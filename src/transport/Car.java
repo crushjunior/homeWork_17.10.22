@@ -8,8 +8,8 @@ public abstract class Car {
     private final String model;
     private Double engineVolume;
     private Driver driver;
-    private final Set<Sponsor> sponsors = new HashSet<>();
-    private final Set<Mechanic<?>> mechanics = new HashSet<>();
+    private final Set<Sponsor> sponsors = new HashSet<>(); // заменил Лист на ХэшСет
+    private final Set<Mechanic<?>> mechanics = new HashSet<>(); // заменил Лист на ХэшСет
 
 
     public Car(String brand, String model, Double engineVolume) {
@@ -42,11 +42,11 @@ public abstract class Car {
 
     public Set<Sponsor> getSponsors() {
         return sponsors;
-    }
+    } // исправил геттер на спонсоров
 
     public Set<Mechanic<?>> getMechanics() {
         return mechanics;
-    }
+    } // исправил геттер на механиков
 
     public Driver getDriver() {
         return driver;
@@ -74,11 +74,11 @@ public abstract class Car {
 
     public abstract void repair();
 
-    public void addSponsor(Sponsor... sponsors) {
+    public void addSponsor(Sponsor... sponsors) { // подправил метод
         this.sponsors.addAll(Arrays.asList(sponsors));
     }
 
-    public void addMechanic(Mechanic<?>... mechanics) {
+    public void addMechanic(Mechanic<?>... mechanics) { // подправил метод
         this.mechanics.addAll(Arrays.asList(mechanics));
     }
 

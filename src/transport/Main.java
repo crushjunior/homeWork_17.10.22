@@ -40,8 +40,8 @@ public class Main {
 
 
         subaru.addMechanic(vitya, alex);
-        subaru.addMechanic(alex);
-        subaru.addSponsor(lg, bq);
+        subaru.addMechanic(alex); // ещё раз добавил Алекса
+        subaru.addSponsor(lg, bq, lg, bq); // еще раз добавил в спонсоры lg и bq
         subaru.setDriver(sam);
 
         faw.addMechanic(vitya); faw.addMechanic(sanya);
@@ -87,7 +87,7 @@ public class Main {
 //        System.out.println(sponsors);
 //        System.out.println(mechanics);
 //        System.out.println(drivers);
-        printInfo(subaru);
+        printInfo(subaru); // К этому авто добавил повторно механика и спонсоров, в консоль выводит без повторов.
         System.out.println();
         printInfo(man, faw);
         System.out.println();
