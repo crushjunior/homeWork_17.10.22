@@ -88,20 +88,20 @@ public class Main {
 //        System.out.println(mechanics);
 //        System.out.println(drivers);
         printInfo(subaru); // К этому авто добавил повторно механика и спонсоров, в консоль выводит без повторов.
-        System.out.println();
-        printInfo(man, faw);
-        System.out.println();
-        genergy.addPassCar(subaru);
-        genergy.addPassCar(oka);
-        genergy.addPassCar(mitsu);
-        genergy.addPassCar(bmw);
-        System.out.println();
-        genergy.addCargoCar(kamaz);
-        genergy.addCargoCar(man);
-        genergy.addCargoCar(scania);
-        genergy.addCargoCar(renault);
-        System.out.println();
-        genergy.service();
+//        System.out.println();
+//        printInfo(man, faw);
+//        System.out.println();
+//        genergy.addPassCar(subaru);
+//        genergy.addPassCar(oka);
+//        genergy.addPassCar(mitsu);
+//        genergy.addPassCar(bmw);
+//        System.out.println();
+//        genergy.addCargoCar(kamaz);
+//        genergy.addCargoCar(man);
+//        genergy.addCargoCar(scania);
+//        genergy.addCargoCar(renault);
+//        System.out.println();
+//        genergy.service();
 
     }
 
